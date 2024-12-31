@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #editor {
+            border: 1px solid #ddd;
+            height: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="pageTitle">Arcade Code Dynamic Editor</h1>
+    <h1>
+        <input type="text" id="pageTitleInput" style="font-size: 1.5em; border: none; outline: none; width: 100%;" value="Dynamic Code Editor">
+    </h1>
+    <textarea id="editor"></textarea>
+    <div id="buttonContainer">
+        <button id="runCode">Save Code & Title</button>
+    </div>
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/javascript/javascript.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
