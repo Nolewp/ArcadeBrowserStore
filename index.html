@@ -11,14 +11,12 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        #editor {
-            border: 1px solid #ddd;
-            height: 300px;
-        }
+
     </style>
 
 </head>
 <body>
+    <div class="wraper">
     <h1 id="pageTitle">Arcade Code Dynamic Editor</h1>
     <h1>
         <input type="text" id="pageTitleInput" style="font-size: 1.5em; border: none; outline: none; width: 100%;" value="Dynamic Code Editor">
@@ -27,7 +25,8 @@
     <div id="buttonContainer">
         <button id="runCode">Save Code & Title</button>
     </div>
-    
+    <footer class="footer">Brought to you by <a href="https://www.geospatialjack.com/">Geospatial Jack</a></footer>
+    </div>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
