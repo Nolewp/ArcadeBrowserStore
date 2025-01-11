@@ -22,7 +22,19 @@ const editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
 editor.setValue(code); // Set initial code from URL
 
 // Add functionality to save the code and title
-document.getElementById('runCode').innerText = 'Save Code & Title'; // Update button text
+document.getElementById('runCode').innerText = 'Save Code & Title';
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        console.log('Text copied to clipboard');
+      })
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+  }
+
+ // Update button text
 document.getElementById('runCode').addEventListener('click', () => {
     const updatedCode = encodeURIComponent(editor.getValue());
     const updatedTitle = encodeURIComponent(document.getElementById('pageTitleInput').value);
@@ -30,4 +42,7 @@ document.getElementById('runCode').addEventListener('click', () => {
     history.replaceState(null, '', newURL); // Update the URL without refreshing
     document.title = document.getElementById('pageTitleInput').value; // Update browser title dynamically
     alert('Title and Code saved to URL!');
+    copyToClipboard(newURL);
+
+
 });
